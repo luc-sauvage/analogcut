@@ -8,6 +8,13 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("./public"));
 
+app.get("/", (req, res) => {
+    res.render("homepage", {
+        layout: "main",
+    })
+});
+
+
 if (require.main == module) {
     app.listen(process.env.PORT || 8080, () => {
         console.log("AnalogCut server is running");
