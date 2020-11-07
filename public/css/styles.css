@@ -1,5 +1,70 @@
 
 /* navbar */
+
+.navbar {
+    max-height: 150px;
+}
+
 .navbar-logo {
-    max-width: 250px;
+    position: relative;
+    top: 50px;
+    max-width: 40vh;
+    overflow: visible;
+}
+
+
+.navbar-button {
+    background-color: #880b8a;
+    color: white;
+} 
+
+.navbar-button:hover {
+    background-color: #ccff00;
+}
+
+/* hero section */
+.big-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.mid-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.small-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.hero-img-cont {
+    box-shadow: -10px 40px #880b8a, 0px 40px #880b8a;
+}
+
+.hero-img-cont:hover {
+    box-shadow: -10px 40px #ccff00, 0px 40px #ccff00;
+}
+
+.hero-img {
+    
+    /* border-left: solid 10px #880b8a;
+    border-bottom: solid 40px #880b8a; */
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+}
+
+.hero-img:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-logo {
+        position: relative;
+        top: 0px;
+        max-width: 20vh;
+        overflow: hidden;
+    }
 }
