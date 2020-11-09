@@ -12,6 +12,29 @@
     overflow: visible;
 }
 
+.nav-elem {
+    position: relative;
+    transition: 0.5s;
+}
+
+.nav-elem:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #ccff00;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.nav-elem:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
 
 .navbar-button {
     background-color: #880b8a;
@@ -21,6 +44,9 @@
 .navbar-button:hover {
     background-color: #ccff00;
 }
+
+
+
 
 /* hero section */
 .big-title {
