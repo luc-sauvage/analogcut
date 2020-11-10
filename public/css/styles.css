@@ -1,17 +1,21 @@
+/* @import url("//use.fontawesome.com/releases/v5.6.1/css/all.css'"); */
+
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* generic */
 
-.button {
+.button-type1 {
     background-color: #880b8a;
     color: white;
     margin: 30px auto;
 }
 
-.button:hover {
+.button-type1:hover {
     background-color: #ccff00;
+    color: black;
 }
 
 /* navbar */
@@ -58,6 +62,7 @@ body {
 
 .navbar-button:hover {
     background-color: #ccff00;
+    color: black;
 }
 
 
@@ -112,6 +117,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .home-description-left {
@@ -145,7 +151,6 @@ body {
     max-width: 75em;
     margin: 0 auto; 
     transform: skewY(3.8deg);
-
 }
 
 .card {
@@ -159,6 +164,17 @@ body {
     bottom: 5px;
 }
 
+.card-image {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+}
+
+.card-image:hover {
+    transition: filter .2s ease-in-out;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
+}
+
 .card-title {
     padding: 20px 10px 0 10px;
     color: #880b8a;
@@ -170,6 +186,36 @@ body {
     padding: 10px;
 }
 
+/* media-queries mid-section home */
+
+@media screen and (max-width: 1300px) {
+    .home-description-left {
+        position: relative; 
+        min-width: 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home-description-left {
+        position: relative; 
+        min-width: 75%;
+        right: 0;
+    }
+    .home-description-right {
+        padding: 0px 20px;
+        min-width: 75%;
+        margin-bottom: 20px;
+    }
+    .button-type1 {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+}
+
+
+
+
 /* white section home */
 
 .home-bottom-section {
@@ -178,16 +224,25 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* top: -25vh; */
     color: white;
     background-color: black;
-    height: 25vh;
+    height: 10vh;
 }
 
-@media screen and (max-width: 1000px) {
+.social-svg-logo {
+    width: 20px;
+    height: auto;
+    margin: 5px; 
+}
+.social-svg-logo:hover {
+    width: 25px;
+    height: auto;
+}
+
+
+
+@media screen and (max-width: 750px) {
     .home-bottom-section {
-        z-index: 200;
-       /*  top: -5vh; */
-        height: 25vh;
+        height: 5vh;
     }
 }
