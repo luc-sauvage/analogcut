@@ -2,6 +2,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* generic */
+
+.button {
+    background-color: #880b8a;
+    color: white;
+    margin: 30px auto;
+}
+
+.button:hover {
+    background-color: #ccff00;
+}
 
 /* navbar */
 
@@ -129,26 +140,54 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     width: 100%;
-    gap:50px;
+    gap: 50px;
     max-width: 1400px;
     max-width: 75em;
     margin: 0 auto; 
     transform: skewY(3.8deg);
+
 }
 
 .card {
     background-color: white;
     border-top: solid 15px #880b8a;
+    position: relative;
+}
+
+.card:hover {
+    border-top: solid 15px #ccff00;
+    bottom: 5px;
+}
+
+.card-title {
+    padding: 20px 10px 0 10px;
+    color: #880b8a;
+    font-size: 30px; 
+    font-weight: 700;
+}
+
+.card-text {
+    padding: 10px;
 }
 
 /* white section home */
 
-.white-section {
+.home-bottom-section {
+    z-index: 200;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -20px;
+    /* top: -25vh; */
     color: white;
     background-color: black;
+    height: 25vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .home-bottom-section {
+        z-index: 200;
+       /*  top: -5vh; */
+        height: 25vh;
+    }
 }
