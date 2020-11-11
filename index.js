@@ -19,4 +19,4 @@ if (require.main == module) {
     app.listen(process.env.PORT || 8080, () => {
         console.log("AnalogCut server is running");
     });
-};
+}

@@ -1,11 +1,39 @@
-/* @import url("//use.fontawesome.com/releases/v5.6.1/css/all.css'"); */
+/* generic */
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
-/* generic */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: white
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+/* generic buttons */
 
 .button-type1 {
     background-color: #880b8a;
@@ -20,8 +48,149 @@ body {
 
 /* navbar */
 
+.navbar-container {
+    width: 100%;
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.menu-icons {
+    color: white;
+    font-size: 4rem; 
+    position: absolute;
+    top: 50%;
+    right: 2rem; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1500;
+    display: none; 
+}
+
+.navbar {
+    width: 100%;
+    height: 8rem;
+    max-height: 150px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 20rem;
+    height: auto;
+}
+
+
+.nav-menu {
+    display: flex; 
+}
+
+.nav-menu li {
+    line-height: 8rem;
+    position: relative;
+}
+
+.nav-menu li:hover > .nav-sub-menu {
+    top: 8rem; 
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+}
+
+.nav-sub-menu {
+    width: 20rem;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 16rem;  
+    border-top: 3px solid #ccff00;
+    transition: all 650ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-sub-menu::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: 3rem;
+    border: 1.2rem transparent solid;
+    border-bottom-color:  #ccff00;
+}
+
+
+
+.nav-sub-menu li {
+    line-height: 4rem;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        z-index: 1000;
+        background-color: gray;
+    }
+    .nav-menu > li {
+        line-height: 6rem;
+    }
+    .nav-menu li:hover > .nav-sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+    .nav-sub-menu {
+        position: initial;
+        border: 3px solid transparent;
+        border-left-color: #ccff00;
+        margin-left: 1rem; 
+        max-height: 0;
+    }
+    .nav-sub-menu::before {
+        display: none; 
+    }
+    .menu-icons {
+        display: block;
+    }
+    .ion-md-close {
+        display: none; 
+    }
+
+    .navbar.active .ion-md-close {
+        display: block;
+    }
+    
+    .navbar.active .ion-md-menu {
+        display: none;
+    }
+
+    .navbar.active .nav-menu {
+        display: flex;
+    }
+
+}
+
+
+/* 
 .navbar {
     max-height: 150px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-logo {
@@ -31,9 +200,25 @@ body {
     overflow: visible;
 }
 
+.nav-menu {
+    display: flex; 
+}
+
+.nav-sub-menu {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.nav-menu:hover > .nav-sub-menu {
+    display: block;
+}
+
 .nav-elem {
     position: relative;
     transition: 0.5s;
+    color: white;
+    padding: 10px 20px;
 }
 
 .nav-elem:after {
@@ -63,7 +248,7 @@ body {
 .navbar-button:hover {
     background-color: #ccff00;
     color: black;
-}
+} */
 
 
 /* hero section home */
