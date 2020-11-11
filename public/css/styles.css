@@ -21,13 +21,9 @@ ul {
     list-style: none;
 }
 
-li {
-    color: white
-}
-
 header {
     width: 100%;
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 90;
@@ -50,7 +46,6 @@ header {
 
 .navbar-container {
     width: 100%;
-    max-width: 117rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -78,35 +73,40 @@ header {
 }
 
 .navbar-logo {
-    width: 20rem;
+    width: 23rem;
     height: auto;
+    position: relative;
+    top: 30px; 
+    left: 15px;
+    max-width: 40vh;
+    overflow: visible;
 }
 
 
 .nav-menu {
     display: flex; 
+    align-items: center;
 }
 
 .nav-menu li {
-    line-height: 8rem;
+    /* line-height: 8rem; */
     position: relative;
+    color: white;
 }
 
 .nav-menu li:hover > .nav-sub-menu {
-    top: 8rem; 
+    top: 4rem; 
     opacity: 1;
     visibility: visible;
 }
 
 .nav-menu a {
     display: block;
-    color: white;
     padding: 0 1.5rem;
-    font-size: 1.4rem;
 }
 
 .nav-sub-menu {
-    width: 20rem;
+    width: 8.9rem;
     display: block;
     position: absolute;
     z-index: 100;
@@ -115,34 +115,63 @@ header {
     transition: all 650ms ease;
     opacity: 0;
     visibility: hidden;
+    background-color: white;
+    
 }
 
 .nav-sub-menu::before {
     content: "";
     position: absolute;
-    top: -2.5rem;
-    left: 3rem;
-    border: 1.2rem transparent solid;
+    top: -2rem;
+    left: 1rem;
+    border: 1.0rem transparent solid;
     border-bottom-color:  #ccff00;
 }
 
-
-
 .nav-sub-menu li {
-    line-height: 4rem;
+    line-height: 2.5rem;
+    color: black;
 }
 
-@media screen and (max-width: 850px) {
+.nav-sub-menu li:hover{
+    color: #880b8a;
+} 
+
+.nav-elem {
+    transition: 0.5s;
+}
+
+.nav-elem:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background: #ccff00;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.nav-elem:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+@media screen and (max-width: 1100px) {
     .nav-menu {
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100%;
         flex-direction: column;
         align-items: center;
         display: none;
         z-index: 1000;
         background-color: gray;
+        overflow-y: scroll;
     }
     .nav-menu > li {
         line-height: 6rem;
@@ -185,13 +214,6 @@ header {
 
 
 /* 
-.navbar {
-    max-height: 150px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .navbar-logo {
     position: relative;
@@ -287,7 +309,7 @@ header {
 }
 
 /* media queries hero section */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .navbar-logo {
         position: relative;
         top: 0px;
