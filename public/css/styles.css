@@ -46,12 +46,6 @@ header {
 
 /* navbar */
 
-.navbar-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
 .menu-icons {
     color: white;
     font-size: 4rem; 
@@ -72,18 +66,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.7s;
 }
 
 .navbar-logo {
-    width: 23rem;
     height: auto;
     position: relative;
-    top: 30px; 
     left: 15px;
-    max-width: 40vh;
     overflow: visible;
+    transition: all 0.7s;
+    width: 23rem;
+    top: 30px; 
 }
-
 
 .nav-menu {
     display: flex; 
@@ -222,6 +216,10 @@ header {
         margin-left: 1rem; 
         max-height: 0;
     }
+
+    .nav-elem:after {
+        margin-top: 0px;
+    }
     
     .nav-sub-menu::before {
         display: none; 
@@ -296,8 +294,8 @@ header {
 @media screen and (max-width: 1100px) {
     .navbar-logo {
         position: relative;
-        top: 0px;
-        max-width: 20vh;
+        top: 0;
+        max-width: 12rem;
         overflow: hidden;
     }
 }
