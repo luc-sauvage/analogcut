@@ -9,8 +9,11 @@ app.set("view engine", "handlebars");
 app.use(express.static("./public"));
 
 app.get("/", (req, res) => {
+    let title = "AnalogCut Mastering & Dubplates - Berlin";
     res.render("homepage", {
         layout: "main",
+        title,
+        pageTitle: true,
     }) 
 });
 
