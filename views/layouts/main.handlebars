@@ -19,7 +19,11 @@
     ></script>
 </head>
 <body class="font-sans">
+    {{#if navbarHome}}
+    <header>{{> navbar-home}}</header>
+    {{else}}
     <header>{{> navbar}}</header>
+    {{/if}}
     <main>{{{body}}}</main>
     <footer>{{> footer}}</footer>
 </body>

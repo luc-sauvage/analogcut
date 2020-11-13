@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
         layout: "main",
         title,
         pageTitle: true,
+        navbarHome: true,
     }) 
 });
 
