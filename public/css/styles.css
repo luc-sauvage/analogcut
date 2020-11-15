@@ -181,8 +181,6 @@ header {
 
 @media screen and (max-width: 1100px) {
 
-    
-
     .menu-items-container {
         width: 100vw;
         height: 100vh;
@@ -314,7 +312,7 @@ header {
     }
 }
 
-/* black section home */
+/* mid section home */
 
 .home-description {
     display: flex;
@@ -365,6 +363,7 @@ header {
 .card:hover {
     border-top: solid 15px #ccff00;
     bottom: 5px;
+    transition: all 1s;
 }
 
 .card-image {
@@ -372,7 +371,7 @@ header {
     filter: grayscale(100%); 
 }
 
-.card-image:hover {
+.card:hover > .card-image{
     transition: filter .2s ease-in-out;
     -webkit-filter: grayscale(0%); 
     filter: grayscale(0%);

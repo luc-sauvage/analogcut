@@ -8,6 +8,16 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("./public"));
 
+
+app.get("/mastering", (req, res) => {
+    let title = "We base all mastering processes on analog equipment, ensuring to improve the audio quality. We master the audio for Vinyl, Digital, CD or Cassette.";
+    res.render("homepage", {
+        layout: "main",
+        title,
+        pageTitle: true,
+    }) 
+});
+
 app.get("/", (req, res) => {
     let title = "AnalogCut Mastering & Dubplates - Berlin";
     res.render("homepage", {
