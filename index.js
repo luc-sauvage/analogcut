@@ -11,7 +11,7 @@ app.use(express.static("./public"));
 
 app.get("/mastering", (req, res) => {
     let title = "We base all mastering processes on analog equipment, ensuring to improve the audio quality. We master the audio for Vinyl, Digital, CD or Cassette.";
-    res.render("homepage", {
+    res.render("mastering", {
         layout: "main",
         title,
         pageTitle: true,

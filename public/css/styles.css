@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    background-color: black;
 }
 
 a {
@@ -312,6 +312,32 @@ header {
     }
 }
 
+/* hero section product  */
+
+.hero-prod-container {
+    width: 100vw;
+    height: 30rem;
+    display: flex;
+}
+
+.left-skewed-container {
+    transform: skewY(-60deg);
+    width: 50%;
+    height: 100%;
+}
+
+
+.skewed-img-container {
+    transform: skewY(60deg);
+    width: 100%;
+    height:100%;
+}
+
+.hero-prod-img {
+    width: 100%;
+    height:100%;
+}
+
 /* mid section home */
 
 .home-description {
@@ -341,6 +367,7 @@ header {
 
 .black-section-bottom {
     margin-top: -10vh;
+    background-color: black;
 }
 
 .grid-container { 	
@@ -416,7 +443,7 @@ header {
 }
 
 
-/* white section home */
+/* bottom section home */
 
 .home-bottom-section {
     z-index: 200;
