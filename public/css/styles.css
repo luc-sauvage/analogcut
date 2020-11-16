@@ -289,6 +289,7 @@ header {
 
 .hero-img-cont:hover {
     box-shadow: -10px 40px #ccff00, 0px 40px #ccff00;
+    transition: box-shadow 1s;
 }
 
 .hero-img {
@@ -389,8 +390,8 @@ header {
 
 .card:hover {
     border-top: solid 15px #ccff00;
-    bottom: 5px;
-    transition: all 1s;
+    transform: translateY(-3%);
+    transition: all ease-out 1s;
 }
 
 .card-image {
