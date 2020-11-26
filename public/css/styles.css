@@ -31,6 +31,15 @@ header {
 
 /* generic buttons */
 
+.text-link {
+    color:  #880b8a;
+}
+
+.text-link:hover {
+    color:  #ccff00;
+}
+
+
 .button-type1 {
     background-color: #880b8a;
     color: white;
@@ -458,6 +467,18 @@ header {
 
 }
 
+/* mid section product */
+
+.description-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.text-column-prod {
+    width: 40rem; 
+}
 
 /* bottom section home */
 
