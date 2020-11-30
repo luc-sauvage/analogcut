@@ -57,7 +57,7 @@
     </div>
     <div id="faq" class="black-description-container skewed">
         <div class="unskew">
-            <div class="prod-description-col left">
+            <div class="prod-description-col up">
                 <h2 class="mid-title py-4">FAQ</h2>
                 <h3 class="small-title py-4">Specifications for Mastering:</h2>
                 <ul>
@@ -74,7 +74,7 @@
                 <h3 class="small-title py-4">Should i use a limiter or compressor on the mix buss?</h2>
                 <p>You can use a compressor if you like the sound that it produce, but we suggest to use it carefully! We really suggest to leave your mix without any sort of limiting effects, we can provide a high quality limiting on your music.</p>
             </div>
-            <div class="prod-description-col right">
+            <div class="prod-description-col">
                 <h3 class="small-title py-4">Why the mastering engineer should be a different person from the producer/mixer?</h2>
                 <p>
                     If you have produced, arranged and maybe also mixed a song you know all about it, or you think this... In fact after hours of listening your ears are no longer analytical on that song, so you need to have the opinion of an external mastering engineer to find what in your mix can be improved. A skilled mastering engineer listens your music with an objective ear, and find the best way to improve the sound quality, add detail and deepness and get the right loudness level for your songs.
@@ -89,33 +89,83 @@
         </div>
     </div>
     <div id="booking-form" class="white-description-container">
-        <div class="prod-description-col left">
+        <div>
             <h2 class="mid-title py-4">Book Your Masters</h2>
-            <h3 class="small-title py-4">Contact Info</h3>
-            <form action="/book-master" id="master-form" method="POST" role="form"> 
-                <fieldset >  
+            <form class="form-box" action="/book-master" id="master-form" method="POST" role="form"> 
+                <fieldset class="form-col left" >  
                     <input 
+                        class="input-field"
                         id="name" 
                         name="name" 
                         type="text" 
-                        placeholder="Your name" 
+                        placeholder="Your name *" 
                         required
                     >
                     <input 
+                        class="input-field"
                         id="email" 
                         name="email" 
-                        type="text" 
-                        placeholder="Your email" 
+                        type="email" 
+                        placeholder="Your e-mail *" 
                         required
                     >
                     <textarea 
+                        class="input-field"
                         id="message" 
                         name="message" 
-                        placeholder="Enter your message here" 
+                        placeholder="Billing Address *" 
                         rows="3" 
                         required
                     ></textarea>
+                    <input 
+                        class="input-field"
+                        id="project" 
+                        name="project" 
+                        type="text" 
+                        placeholder="Project ID or Cat. No: *" 
+                        required
+                    >
+                    <input 
+                        class="input-field"
+                        id="artist" 
+                        name="artist" 
+                        type="text" 
+                        placeholder="Artist" 
+                        required
+                    >
+                    <input 
+                        class="input-field"
+                        id="label" 
+                        name="label" 
+                        type="text" 
+                        placeholder="Label ('none' if self released)" 
+                    >
                 </fieldset> 
+                <fieldset class="form-col right" > 
+                    <select class="input-field" id="tracks" required>
+                        <option name="tracks" value="0" selected="selected">Number of tracks *</option>
+                        <option name="tracks" value="1">1</option>
+                        <option name="tracks" value="2">2</option>
+                        <option name="tracks" value="3">3</option>
+                        <option name="tracks" value="4">4</option>
+                        <option name="tracks" value="5">5</option>
+                        <option name="tracks" value="6">6</option>
+                        <option name="tracks" value="7">7</option>
+                        <option name="tracks" value="8">8</option>
+                        <option name="tracks" value="9">9</option>
+                        <option name="tracks" value="10">10</option>
+                        <option name="tracks" value="11">11</option>
+                        <option name="tracks" value="12">12</option>
+                        <option name="tracks" value="13">13</option>
+                        <option name="tracks" value="14">14</option>
+                        <option name="tracks" value="15">15</option>
+                        <option name="tracks" value="16">16</option>
+                        <option name="tracks" value="17">17</option>
+                        <option name="tracks" value="18">18</option>
+                        <option name="tracks" value="19">19</option>
+                        <option name="tracks" value="10">20</option>
+                    </select>
+                </fieldset>
             </form>
         </div>
     </div>

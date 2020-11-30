@@ -468,18 +468,11 @@ header {
     max-width: 40rem;
 }
 
-@media screen and (max-width: 800px) {
-    .prod-description-col {
-        padding: 0px 20px;
-        min-width: 75%;
-    }
-}
-
 .black-description-container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 40px 20px;
+    padding: 40px 20px 0;
     flex-wrap: wrap;
     transform: skewY(3.8deg);
     color: white;
@@ -496,9 +489,25 @@ header {
     padding: 30px 0;
 }
 
-.left {
+.up {
     position: relative;
-    top: -40px;
+    top: -6rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .prod-description-col {
+        padding: 0px 20px;
+        min-width: 75%;
+    }
+
+    .unskew {
+        padding: 0 0 30px;
+    }
+
+    .up {
+        position: relative;
+        top: 0rem;
+    }
 }
 
 /* bottom section home */
@@ -528,4 +537,39 @@ header {
     .home-bottom-section {
         height: 5vh;
     }
+}
+
+/* form */
+
+.input-field {
+    border: black solid 1px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    min-width: 300px;
+}
+
+.form-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-col {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    margin-right: 1rem;
+}
+
+.right {
+    margin-left: 1rem;
+}
+
+select {
+    height: 45px;
+    color: #a0afc0;
 }
