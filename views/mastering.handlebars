@@ -91,12 +91,32 @@
     <div id="booking-form" class="white-description-container">
         <div class="prod-description-col left">
             <h2 class="mid-title py-4">Book Your Masters</h2>
-            <h3 class="small-title py-4">Contact Info</h2>
-            <input type="names">
-            <input type="email">
-            <input type="textarea">
-
+            <h3 class="small-title py-4">Contact Info</h3>
+            <form action="/book-master" id="master-form" method="POST" role="form"> 
+                <fieldset >  
+                    <input 
+                        id="name" 
+                        name="name" 
+                        type="text" 
+                        placeholder="Your name" 
+                        required
+                    >
+                    <input 
+                        id="email" 
+                        name="email" 
+                        type="text" 
+                        placeholder="Your email" 
+                        required
+                    >
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Enter your message here" 
+                        rows="3" 
+                        required
+                    ></textarea>
+                </fieldset> 
+            </form>
         </div>
     </div>
-
 </section>
