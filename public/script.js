@@ -1,5 +1,7 @@
 console.log("sanity check");
 
+/* navbar logic */
+
 document.querySelector(".menu-icons").addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("active");
 });
@@ -37,3 +39,40 @@ function growShrinkLogo() {
         console.log("NOT shrinking!");
     }
 }
+
+/* mastering form conditional logics */
+
+let vinylCheckBox = document.getElementById("vinyl");
+let vinylRadio = document.getElementById("vinyl-radio");
+let lacquer = document.getElementById("lacquer");
+let lacquerRadio = document.getElementById("lacquer-radio");
+
+let cdCheckBox = document.getElementById("cd");
+let cdRadio = document.getElementById("cd-radio");
+
+let tapeCheckBox = document.getElementById("tape");
+let tapeRadio = document.getElementById("tape-radio");
+
+vinylCheckBox.onclick = function () {
+    vinylRadio.classList.toggle("hidden");
+};
+
+vinylRadio.onclick = function () {
+    if (lacquer.checked) {
+        lacquerRadio.classList.add("show");
+        lacquerRadio.classList.remove("hidden");
+    } else {
+        lacquerRadio.classList.remove("show");
+        lacquerRadio.classList.add("hidden");
+    }
+};
+
+cdCheckBox.onclick = function () {
+    cdRadio.classList.toggle("hidden");
+};
+
+tapeCheckBox.onclick = function () {
+    tapeRadio.classList.toggle("hidden");
+};
+
+/* mastering form math */

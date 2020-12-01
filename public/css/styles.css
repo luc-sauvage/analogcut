@@ -573,3 +573,19 @@ select {
     height: 45px;
     color: #a0afc0;
 }
+
+.radio {
+    padding: 0 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.small-text {
+    font-size: 0.6rem;
+}

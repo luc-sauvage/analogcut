@@ -111,8 +111,8 @@
                     >
                     <textarea 
                         class="input-field"
-                        id="message" 
-                        name="message" 
+                        id="address" 
+                        name="address" 
                         placeholder="Billing Address *" 
                         rows="3" 
                         required
@@ -165,6 +165,99 @@
                         <option name="tracks" value="19">19</option>
                         <option name="tracks" value="10">20</option>
                     </select>
+                    <div class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="no-options" name="no-options"
+                            checked>
+                        <label style="display: inline-block" for="no-options">No additional options</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="additional-format" name="additional-format"
+                        >
+                        <label style="display: inline-block" for="additional-format">Additional Format (ex. Vinyl + Digital) + 5€ /Track</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="stem-mastering" name="stem-mastering"
+                        >
+                        <label style="display: inline-block" for="stem-mastering">Stem Mastering + 30€ /Track</label>
+                    </div>
+                    <textarea 
+                        class="input-field"
+                        id="tracklist" 
+                        name="tracklist" 
+                        placeholder="Insert tracklist, please specify also the side for Vinyl and Cassette."
+                        rows="3" 
+                        required
+                    ></textarea>
+                    <div id="vinyl-checkbox" class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="vinyl" name="vinyl"
+                            >
+                        <label style="display: inline-block" for="vinyl">Vinyl</label>
+                    </div>
+                    <div id="vinyl-radio" class="radio hidden">
+                        <p class="small-text">Format to be delivered to pressing plant, contact us if you have questions</p>
+                        <input id="lacquer" type="radio" name="vinyl-radio" value="lacquer">
+                        <label for="lacquer">Master Lacquer Disc</label>
+                        <input id="masterfile" type="radio" name="vinyl-radio" value="masterfile">
+                        <label for="masterfile">Master File</label>
+                        <div id="lacquer-radio" class="radio hidden">
+                            <p class="small-text">Master Disc cutting, Side A (price per side):*</p>
+                            <input id="9minA" type="radio" name="lacquer-radA" value="9minA">
+                            <label for="9minA">up to 9 min / side + 95€</label>
+                            <input id="15minA" type="radio" name="lacquer-radA" value="15minA">
+                            <label for="15minA">up to 15 min / side + 110€</label>
+                            <input id="23minA" type="radio" name="lacquer-radA" value="masterfile">
+                            <label for="23minA">up to 23 min / side + 130€</label>
+                            <br>
+                            <p class="small-text">Master Disc cutting, Side B (price per side):*</p>
+                            <input id="9minB" type="radio" name="lacquer-radB" value="9minB">
+                            <label for="9minB">up to 9 min / side + 95€</label>
+                            <input id="15minB" type="radio" name="lacquer-radB" value="15minB">
+                            <label for="15minB">up to 15 min / side + 110€</label>
+                            <input id="23minB" type="radio" name="lacquer-radB" value="23minB">
+                            <label for="23minB">up to 23 min / side + 130€</label>
+                            <select style="display: block" class="input-field" id="pressing-shipment" required>
+                                <option name="pressing-shipment" value="0" selected="selected">Shipping to pressing plant: * </option>
+                                <option name="pressing-shipment" value="germany-ship">Germany + 8€</option>
+                                <option name="pressing-shipment" value="europe-ship">Europe + 18€</option>
+                                <option name="pressing-shipment" value="world-ship">Worldwide + 40€</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="digital" name="digital"
+                            >
+                        <label style="display: inline-block" for="digital">Digital</label>
+                    </div>
+                    <div id="cd-checkbox" class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="cd" name="cd"
+                        >
+                        <label style="display: inline-block" for="cd">CD</label>
+                    </div>
+                    <div id="cd-radio" class="radio hidden">
+                        <p class="small-text">Format to be delivered to duplication plant, contact us if you have questions</p>
+                        <input id="ddp" type="radio" name="cd-radio" value="ddp">
+                        <label for="ddp">DDP image / + 40€</label>
+                        <input id="cdmaster" type="radio" name="cd-radio" value="cdmaster">
+                        <label for="cdmaster">Physical CD Master / + 40€</label>
+                    </div>
+                    <div id="tape-checkbox" class="checkbox" >
+                        <input style="display: inline-block" type="checkbox" id="tape" name="tape"
+                        >
+                        <label style="display: inline-block" for="tape">Cassette</label>
+                    </div>
+                    <div id="tape-radio" class="radio hidden">
+                        <input id="mastercassette" type="radio" name="tape-radio" value="mastercassette">
+                        <label for="mastercassette">Master Cassette / + 20€</label>
+                        <input id="digitalmastercassette" type="radio" name="tape-radio" value="digitalmastercassette">
+                        <label for="digitalmastercassette">Digital Master</label>
+                    </div>
+                    <textarea 
+                        class="input-field"
+                        id="comments" 
+                        name="comments" 
+                        placeholder="Comments..." 
+                        rows="2" 
+                    ></textarea>
                 </fieldset>
             </form>
         </div>
