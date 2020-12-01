@@ -76,3 +76,61 @@ tapeCheckBox.onclick = function () {
 };
 
 /* mastering form math */
+
+let tracksNumber = document.getElementById("tracks");
+let additionalFormat = document.getElementById("additional-format");
+let stemMastering = document.getElementById("stem-mastering");
+let totalSum = document.getElementById("total");
+let pressingShipment = document.getElementById("pressing-shipment");
+let cuttingOptionsA = document.getElementsByName("lacquer-radA");
+let cuttingOptionsB = document.getElementsByName("lacquer-radB");
+let cdOptions = document.getElementsByName("cd-radio");
+let tapeOptions = document.getElementsByName("tape-radio");
+let vatOptions = document.getElementsByName("vat-radio");
+
+function calculateTotal() {
+    var total;
+    total = 0;
+
+    total = tracksNumber.value * 35;
+    if (additionalFormat.checked) {
+        total += 5 * tracksNumber.value;
+    }
+    if (stemMastering.checked) {
+        total += 30 * tracksNumber.value;
+    }
+    if (vinylCheckBox.checked && lacquer.checked) {
+        total += 1 * pressingShipment.value;
+    }
+
+    for (var i = 0; i < cuttingOptionsA.length; i++) {
+        if (cuttingOptionsA[i].checked) {
+            total += 1 * cuttingOptionsA[i].value;
+        }
+    }
+
+    for (var i = 0; i < cuttingOptionsB.length; i++) {
+        if (cuttingOptionsB[i].checked) {
+            total += 1 * cuttingOptionsB[i].value;
+        }
+    }
+
+    for (var i = 0; i < cdOptions.length; i++) {
+        if (cdOptions[i].checked) {
+            total += 1 * cdOptions[i].value;
+        }
+    }
+    for (var i = 0; i < tapeOptions.length; i++) {
+        if (tapeOptions[i].checked) {
+            total += 1 * tapeOptions[i].value;
+        }
+    }
+
+    for (var i = 0; i < vatOptions.length; i++) {
+        if (vatOptions[i].checked) {
+            total = total * vatOptions[i].value;
+        }
+    }
+
+    totalSum.innerHTML = total.toFixed(2);
+}

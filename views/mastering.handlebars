@@ -88,61 +88,63 @@
             </div>
         </div>
     </div>
-    <div id="booking-form" class="white-description-container">
-        <div>
-            <h2 class="mid-title py-4">Book Your Masters</h2>
+    <div id="booking-form">
+        <div class="form-container">
             <form class="form-box" action="/book-master" id="master-form" method="POST" role="form"> 
-                <fieldset class="form-col left" >  
-                    <input 
-                        class="input-field"
-                        id="name" 
-                        name="name" 
-                        type="text" 
-                        placeholder="Your name *" 
-                        required
-                    >
-                    <input 
-                        class="input-field"
-                        id="email" 
-                        name="email" 
-                        type="email" 
-                        placeholder="Your e-mail *" 
-                        required
-                    >
-                    <textarea 
-                        class="input-field"
-                        id="address" 
-                        name="address" 
-                        placeholder="Billing Address *" 
-                        rows="3" 
-                        required
-                    ></textarea>
-                    <input 
-                        class="input-field"
-                        id="project" 
-                        name="project" 
-                        type="text" 
-                        placeholder="Project ID or Cat. No: *" 
-                        required
-                    >
-                    <input 
-                        class="input-field"
-                        id="artist" 
-                        name="artist" 
-                        type="text" 
-                        placeholder="Artist" 
-                        required
-                    >
-                    <input 
-                        class="input-field"
-                        id="label" 
-                        name="label" 
-                        type="text" 
-                        placeholder="Label ('none' if self released)" 
-                    >
-                </fieldset> 
-                <fieldset class="form-col right" > 
-                    <select class="input-field" id="tracks" required>
+                <div>
+                    <h2 class="mid-title py-4 left">Book Your Masters</h2>
+                    <fieldset class="form-col left" >  
+                        <input 
+                            class="input-field"
+                            id="name" 
+                            name="name" 
+                            type="text" 
+                            placeholder="Your name *" 
+                            required
+                        >
+                        <input 
+                            class="input-field"
+                            id="email" 
+                            name="email" 
+                            type="email" 
+                            placeholder="Your e-mail *" 
+                            required
+                        >
+                        <textarea 
+                            class="input-field"
+                            id="address" 
+                            name="address" 
+                            placeholder="Billing Address *" 
+                            rows="3" 
+                            required
+                        ></textarea>
+                        <input 
+                            class="input-field"
+                            id="project" 
+                            name="project" 
+                            type="text" 
+                            placeholder="Project ID or Cat. No: *" 
+                            required
+                        >
+                        <input 
+                            class="input-field"
+                            id="artist" 
+                            name="artist" 
+                            type="text" 
+                            placeholder="Artist" 
+                            required
+                        >
+                        <input 
+                            class="input-field"
+                            id="label" 
+                            name="label" 
+                            type="text" 
+                            placeholder="Label ('none' if self released)" 
+                        >
+                    </fieldset> 
+                </div>
+                <fieldset class="form-col down right" > 
+                    <select class="input-field" id="tracks" onchange="calculateTotal()" required>
                         <option name="tracks" value="0" selected="selected">Number of tracks *</option>
                         <option name="tracks" value="1">1</option>
                         <option name="tracks" value="2">2</option>
@@ -170,12 +172,12 @@
                             checked>
                         <label style="display: inline-block" for="no-options">No additional options</label>
                     </div>
-                    <div class="checkbox" >
+                    <div class="checkbox" onchange="calculateTotal()">
                         <input style="display: inline-block" type="checkbox" id="additional-format" name="additional-format"
                         >
                         <label style="display: inline-block" for="additional-format">Additional Format (ex. Vinyl + Digital) + 5€ /Track</label>
                     </div>
-                    <div class="checkbox" >
+                    <div class="checkbox" onchange="calculateTotal()">
                         <input style="display: inline-block" type="checkbox" id="stem-mastering" name="stem-mastering"
                         >
                         <label style="display: inline-block" for="stem-mastering">Stem Mastering + 30€ /Track</label>
@@ -188,38 +190,38 @@
                         rows="3" 
                         required
                     ></textarea>
-                    <div id="vinyl-checkbox" class="checkbox" >
+                    <div id="vinyl-checkbox" class="checkbox" onchange="calculateTotal()">
                         <input style="display: inline-block" type="checkbox" id="vinyl" name="vinyl"
                             >
                         <label style="display: inline-block" for="vinyl">Vinyl</label>
                     </div>
                     <div id="vinyl-radio" class="radio hidden">
                         <p class="small-text">Format to be delivered to pressing plant, contact us if you have questions</p>
-                        <input id="lacquer" type="radio" name="vinyl-radio" value="lacquer">
+                        <input id="lacquer" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="lacquer">
                         <label for="lacquer">Master Lacquer Disc</label>
-                        <input id="masterfile" type="radio" name="vinyl-radio" value="masterfile">
+                        <input id="masterfile" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="masterfile">
                         <label for="masterfile">Master File</label>
-                        <div id="lacquer-radio" class="radio hidden">
+                        <div onchange="calculateTotal()" id="lacquer-radio" class="radio hidden">
                             <p class="small-text">Master Disc cutting, Side A (price per side):*</p>
-                            <input id="9minA" type="radio" name="lacquer-radA" value="9minA">
+                            <input id="9minA" type="radio" name="lacquer-radA" value="95" required>
                             <label for="9minA">up to 9 min / side + 95€</label>
-                            <input id="15minA" type="radio" name="lacquer-radA" value="15minA">
+                            <input id="15minA" type="radio" name="lacquer-radA" value="110">
                             <label for="15minA">up to 15 min / side + 110€</label>
-                            <input id="23minA" type="radio" name="lacquer-radA" value="masterfile">
+                            <input id="23minA" type="radio" name="lacquer-radA" value="130">
                             <label for="23minA">up to 23 min / side + 130€</label>
                             <br>
                             <p class="small-text">Master Disc cutting, Side B (price per side):*</p>
-                            <input id="9minB" type="radio" name="lacquer-radB" value="9minB">
+                            <input id="9minB" type="radio" name="lacquer-radB" value="95" required>
                             <label for="9minB">up to 9 min / side + 95€</label>
-                            <input id="15minB" type="radio" name="lacquer-radB" value="15minB">
+                            <input id="15minB" type="radio" name="lacquer-radB" value="110">
                             <label for="15minB">up to 15 min / side + 110€</label>
-                            <input id="23minB" type="radio" name="lacquer-radB" value="23minB">
+                            <input id="23minB" type="radio" name="lacquer-radB" value="130">
                             <label for="23minB">up to 23 min / side + 130€</label>
-                            <select style="display: block" class="input-field" id="pressing-shipment" required>
+                            <select onchange="calculateTotal()" style="display: block" class="input-field" id="pressing-shipment" required>
                                 <option name="pressing-shipment" value="0" selected="selected">Shipping to pressing plant: * </option>
-                                <option name="pressing-shipment" value="germany-ship">Germany + 8€</option>
-                                <option name="pressing-shipment" value="europe-ship">Europe + 18€</option>
-                                <option name="pressing-shipment" value="world-ship">Worldwide + 40€</option>
+                                <option name="pressing-shipment" value="8">Germany + 8€</option>
+                                <option name="pressing-shipment" value="18">Europe + 18€</option>
+                                <option name="pressing-shipment" value="40">Worldwide + 40€</option>
                             </select>
                         </div>
                     </div>
@@ -228,36 +230,54 @@
                             >
                         <label style="display: inline-block" for="digital">Digital</label>
                     </div>
-                    <div id="cd-checkbox" class="checkbox" >
+                    <div onchange="calculateTotal()" id="cd-checkbox" class="checkbox" >
                         <input style="display: inline-block" type="checkbox" id="cd" name="cd"
                         >
                         <label style="display: inline-block" for="cd">CD</label>
                     </div>
-                    <div id="cd-radio" class="radio hidden">
+                    <div onchange="calculateTotal()" id="cd-radio" class="radio hidden">
                         <p class="small-text">Format to be delivered to duplication plant, contact us if you have questions</p>
-                        <input id="ddp" type="radio" name="cd-radio" value="ddp">
+                        <input id="ddp" type="radio" name="cd-radio" value="40">
                         <label for="ddp">DDP image / + 40€</label>
-                        <input id="cdmaster" type="radio" name="cd-radio" value="cdmaster">
+                        <input id="cdmaster" type="radio" name="cd-radio" value="40">
                         <label for="cdmaster">Physical CD Master / + 40€</label>
                     </div>
-                    <div id="tape-checkbox" class="checkbox" >
+                    <div onchange="calculateTotal()" id="tape-checkbox" class="checkbox" >
                         <input style="display: inline-block" type="checkbox" id="tape" name="tape"
                         >
                         <label style="display: inline-block" for="tape">Cassette</label>
                     </div>
-                    <div id="tape-radio" class="radio hidden">
-                        <input id="mastercassette" type="radio" name="tape-radio" value="mastercassette">
+                    <div onchange="calculateTotal()" id="tape-radio" class="radio hidden">
+                        <input id="mastercassette" type="radio" name="tape-radio" value="20">
                         <label for="mastercassette">Master Cassette / + 20€</label>
-                        <input id="digitalmastercassette" type="radio" name="tape-radio" value="digitalmastercassette">
+                        <input id="digitalmastercassette" type="radio" name="tape-radio" value="0">
                         <label for="digitalmastercassette">Digital Master</label>
                     </div>
                     <textarea 
-                        class="input-field"
+                        class="input-field last"
                         id="comments" 
                         name="comments" 
-                        placeholder="Comments..." 
+                        placeholder="Suggestions about the sound, references, pauses between the songs..." 
                         rows="2" 
                     ></textarea>
+                </fieldset>
+                <hr class="hr-black" >
+                <fieldset class="unique-col" >  
+                    <p>VAT</p>
+                    <div onchange="calculateTotal()" id="vat-radio" class="radio">
+                        <input id="novat" type="radio" name="vat-radio" value="1.16">
+                        <label for="novat">My billing address is in Germany or no VAT number + 16%</label>
+                        <input id="euvat" type="radio" name="vat-radio" value="1">
+                        <label for="euvat">EU VAT number (not German)</label>
+                    </div>
+                    <p>Payment options</p>
+                    <div id="pay-radio" class="radio">
+                        <input id="paypal" type="radio" name="pay-radio" value="paypal">
+                        <label for="paypal">Paypal</label>
+                        <input id="cash" type="radio" name="pay-radio" value="cash">
+                        <label for="cash">Bank transfer or cash</label>
+                        <p id="total">Total: </p>
+                    </div>
                 </fieldset>
             </form>
         </div>

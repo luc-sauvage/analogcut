@@ -10,7 +10,6 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    /* background-color: black; */
 }
 
 a {
@@ -27,6 +26,12 @@ header {
     top: 0;
     left: 0;
     z-index: 90;
+}
+
+.hr-black {
+    width: 100%;
+    border-color: black;
+    margin-top: 1rem;
 }
 
 /* generic buttons */
@@ -351,6 +356,12 @@ header {
     left: 20%;
 }
 
+@media screen and (max-width: 1300px) {
+    .hero-prod-img {
+        position: relative;
+        left: 100px;
+    }
+}
 /* mid section home */
 
 .home-description {
@@ -545,7 +556,11 @@ header {
     border: black solid 1px;
     margin: 10px 0;
     padding: 10px 20px;
-    min-width: 300px;
+    min-width: 630px;
+}
+
+.form-container {
+    margin: 0 25px;
 }
 
 .form-box {
@@ -556,9 +571,14 @@ header {
 }
 
 .form-col {
-    max-width: 40rem;
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
+}
+
+.unique-col {
+    align-self: flex-start;
+    margin: 30px 0;
 }
 
 .left {
@@ -588,4 +608,13 @@ select {
 
 .small-text {
     font-size: 0.6rem;
+}
+
+.last {
+    height: 76px;
+}
+
+.down {
+    position: relative;
+    top: 56px;
 }
