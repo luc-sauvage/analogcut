@@ -88,182 +88,179 @@
             </div>
         </div>
     </div>
-    <div id="booking-form">
-        <div class="form-container">
-            <form class="form-box" action="/book-master" id="master-form" method="POST" role="form"> 
-                <div>
-                    <h2 class="mid-title py-4 left">Book Your Masters</h2>
-                    <fieldset class="form-col left" >  
-                        <input 
-                            class="input-field"
-                            id="name" 
-                            name="name" 
-                            type="text" 
-                            placeholder="Your name *" 
-                            required
-                        >
-                        <input 
-                            class="input-field"
-                            id="email" 
-                            name="email" 
-                            type="email" 
-                            placeholder="Your e-mail *" 
-                            required
-                        >
+    <form action="/book-master" id="master-form" method="POST" role="form">
+        <div class="white-description-container">
+            <div class="prod-description-col">
+                <h3 class="mid-title py-4">Book your masters here</h2>
+                <fieldset class="form-col" >  
+                            <input 
+                                class="input-field"
+                                id="name" 
+                                name="name" 
+                                type="text" 
+                                placeholder="Your name *" 
+                                required
+                            >
+                            <input 
+                                class="input-field"
+                                id="email" 
+                                name="email" 
+                                type="email" 
+                                placeholder="Your e-mail *" 
+                                required
+                            >
+                            <textarea 
+                                class="input-field"
+                                id="address" 
+                                name="address" 
+                                placeholder="Billing Address *" 
+                                rows="3" 
+                                required
+                            ></textarea>
+                            <input 
+                                class="input-field"
+                                id="project" 
+                                name="project" 
+                                type="text" 
+                                placeholder="Project ID or Cat. No: *" 
+                                required
+                            >
+                            <input 
+                                class="input-field"
+                                id="artist" 
+                                name="artist" 
+                                type="text" 
+                                placeholder="Artist" 
+                                required
+                            >
+                            <input 
+                                class="input-field"
+                                id="label" 
+                                name="label" 
+                                type="text" 
+                                placeholder="Label ('none' if self released)" 
+                            >
+                            <select class="input-field" id="tracks" onchange="calculateTotal()" required>
+                                <option name="tracks" value="0" selected="selected">Number of tracks *</option>
+                                <option name="tracks" value="1">1</option>
+                                <option name="tracks" value="2">2</option>
+                                <option name="tracks" value="3">3</option>
+                                <option name="tracks" value="4">4</option>
+                                <option name="tracks" value="5">5</option>
+                                <option name="tracks" value="6">6</option>
+                                <option name="tracks" value="7">7</option>
+                                <option name="tracks" value="8">8</option>
+                                <option name="tracks" value="9">9</option>
+                                <option name="tracks" value="10">10</option>
+                                <option name="tracks" value="11">11</option>
+                                <option name="tracks" value="12">12</option>
+                                <option name="tracks" value="13">13</option>
+                                <option name="tracks" value="14">14</option>
+                                <option name="tracks" value="15">15</option>
+                                <option name="tracks" value="16">16</option>
+                                <option name="tracks" value="17">17</option>
+                                <option name="tracks" value="18">18</option>
+                                <option name="tracks" value="19">19</option>
+                                <option name="tracks" value="10">20</option>
+                            </select>
+                            <div class="checkbox" >
+                                <input style="display: inline-block" type="checkbox" id="no-options" name="no-options"
+                                    checked>
+                                <label style="display: inline-block" for="no-options">No additional options</label>
+                            </div>
+                            <div class="checkbox" onchange="calculateTotal()">
+                                <input style="display: inline-block" type="checkbox" id="additional-format" name="additional-format"
+                                >
+                                <label style="display: inline-block" for="additional-format">Additional Format (ex. Vinyl + Digital) + 5€ /Track</label>
+                            </div>
+                            <div class="checkbox" onchange="calculateTotal()">
+                                <input style="display: inline-block" type="checkbox" id="stem-mastering" name="stem-mastering"
+                                >
+                                <label style="display: inline-block" for="stem-mastering">Stem Mastering + 30€ /Track</label>
+                            </div>
+                </fieldset>
+            </div>
+            <div class="prod-description-col">
+                <fieldset class="form-col down" > 
                         <textarea 
                             class="input-field"
-                            id="address" 
-                            name="address" 
-                            placeholder="Billing Address *" 
+                            id="tracklist" 
+                            name="tracklist" 
+                            placeholder="Insert tracklist, please specify also the side for Vinyl and Cassette."
                             rows="3" 
                             required
                         ></textarea>
-                        <input 
-                            class="input-field"
-                            id="project" 
-                            name="project" 
-                            type="text" 
-                            placeholder="Project ID or Cat. No: *" 
-                            required
-                        >
-                        <input 
-                            class="input-field"
-                            id="artist" 
-                            name="artist" 
-                            type="text" 
-                            placeholder="Artist" 
-                            required
-                        >
-                        <input 
-                            class="input-field"
-                            id="label" 
-                            name="label" 
-                            type="text" 
-                            placeholder="Label ('none' if self released)" 
-                        >
-                    </fieldset> 
-                </div>
-                <fieldset class="form-col down right" > 
-                    <select class="input-field" id="tracks" onchange="calculateTotal()" required>
-                        <option name="tracks" value="0" selected="selected">Number of tracks *</option>
-                        <option name="tracks" value="1">1</option>
-                        <option name="tracks" value="2">2</option>
-                        <option name="tracks" value="3">3</option>
-                        <option name="tracks" value="4">4</option>
-                        <option name="tracks" value="5">5</option>
-                        <option name="tracks" value="6">6</option>
-                        <option name="tracks" value="7">7</option>
-                        <option name="tracks" value="8">8</option>
-                        <option name="tracks" value="9">9</option>
-                        <option name="tracks" value="10">10</option>
-                        <option name="tracks" value="11">11</option>
-                        <option name="tracks" value="12">12</option>
-                        <option name="tracks" value="13">13</option>
-                        <option name="tracks" value="14">14</option>
-                        <option name="tracks" value="15">15</option>
-                        <option name="tracks" value="16">16</option>
-                        <option name="tracks" value="17">17</option>
-                        <option name="tracks" value="18">18</option>
-                        <option name="tracks" value="19">19</option>
-                        <option name="tracks" value="10">20</option>
-                    </select>
-                    <div class="checkbox" >
-                        <input style="display: inline-block" type="checkbox" id="no-options" name="no-options"
-                            checked>
-                        <label style="display: inline-block" for="no-options">No additional options</label>
-                    </div>
-                    <div class="checkbox" onchange="calculateTotal()">
-                        <input style="display: inline-block" type="checkbox" id="additional-format" name="additional-format"
-                        >
-                        <label style="display: inline-block" for="additional-format">Additional Format (ex. Vinyl + Digital) + 5€ /Track</label>
-                    </div>
-                    <div class="checkbox" onchange="calculateTotal()">
-                        <input style="display: inline-block" type="checkbox" id="stem-mastering" name="stem-mastering"
-                        >
-                        <label style="display: inline-block" for="stem-mastering">Stem Mastering + 30€ /Track</label>
-                    </div>
-                    <textarea 
-                        class="input-field"
-                        id="tracklist" 
-                        name="tracklist" 
-                        placeholder="Insert tracklist, please specify also the side for Vinyl and Cassette."
-                        rows="3" 
-                        required
-                    ></textarea>
-                    <div id="vinyl-checkbox" class="checkbox" onchange="calculateTotal()">
-                        <input style="display: inline-block" type="checkbox" id="vinyl" name="vinyl"
-                            >
-                        <label style="display: inline-block" for="vinyl">Vinyl</label>
-                    </div>
-                    <div id="vinyl-radio" class="radio hidden">
-                        <p class="small-text">Format to be delivered to pressing plant, contact us if you have questions</p>
-                        <input id="lacquer" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="lacquer">
-                        <label for="lacquer">Master Lacquer Disc</label>
-                        <input id="masterfile" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="masterfile">
-                        <label for="masterfile">Master File</label>
-                        <div onchange="calculateTotal()" id="lacquer-radio" class="radio hidden">
-                            <p class="small-text">Master Disc cutting, Side A (price per side):*</p>
-                            <input id="9minA" type="radio" name="lacquer-radA" value="95" required>
-                            <label for="9minA">up to 9 min / side + 95€</label>
-                            <input id="15minA" type="radio" name="lacquer-radA" value="110">
-                            <label for="15minA">up to 15 min / side + 110€</label>
-                            <input id="23minA" type="radio" name="lacquer-radA" value="130">
-                            <label for="23minA">up to 23 min / side + 130€</label>
-                            <br>
-                            <p class="small-text">Master Disc cutting, Side B (price per side):*</p>
-                            <input id="9minB" type="radio" name="lacquer-radB" value="95" required>
-                            <label for="9minB">up to 9 min / side + 95€</label>
-                            <input id="15minB" type="radio" name="lacquer-radB" value="110">
-                            <label for="15minB">up to 15 min / side + 110€</label>
-                            <input id="23minB" type="radio" name="lacquer-radB" value="130">
-                            <label for="23minB">up to 23 min / side + 130€</label>
-                            <select onchange="calculateTotal()" style="display: block" class="input-field" id="pressing-shipment" required>
-                                <option name="pressing-shipment" value="0" selected="selected">Shipping to pressing plant: * </option>
-                                <option name="pressing-shipment" value="8">Germany + 8€</option>
-                                <option name="pressing-shipment" value="18">Europe + 18€</option>
-                                <option name="pressing-shipment" value="40">Worldwide + 40€</option>
-                            </select>
+                        <div id="vinyl-checkbox" class="checkbox" onchange="calculateTotal()">
+                            <input style="display: inline-block" type="checkbox" id="vinyl" name="vinyl"
+                                >
+                            <label style="display: inline-block" for="vinyl">Vinyl</label>
                         </div>
-                    </div>
-                    <div class="checkbox" >
-                        <input style="display: inline-block" type="checkbox" id="digital" name="digital"
+                        <div id="vinyl-radio" class="radio hidden">
+                            <p class="small-text">Format to be delivered to pressing plant, contact us if you have questions</p>
+                            <input id="lacquer" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="lacquer">
+                            <label for="lacquer">Master Lacquer Disc</label>
+                            <input id="masterfile" onchange="calculateTotal()" type="radio" name="vinyl-radio" value="masterfile">
+                            <label for="masterfile">Master File</label>
+                            <div onchange="calculateTotal()" id="lacquer-radio" class="radio hidden">
+                                <p class="small-text">Master Disc cutting, Side A (price per side):*</p>
+                                <input id="9minA" type="radio" name="lacquer-radA" value="95" required>
+                                <label for="9minA">up to 9 min / side + 95€</label>
+                                <input id="15minA" type="radio" name="lacquer-radA" value="110">
+                                <label for="15minA">up to 15 min / side + 110€</label>
+                                <input id="23minA" type="radio" name="lacquer-radA" value="130">
+                                <label for="23minA">up to 23 min / side + 130€</label>
+                                <br>
+                                <p class="small-text">Master Disc cutting, Side B (price per side):*</p>
+                                <input id="9minB" type="radio" name="lacquer-radB" value="95" required>
+                                <label for="9minB">up to 9 min / side + 95€</label>
+                                <input id="15minB" type="radio" name="lacquer-radB" value="110">
+                                <label for="15minB">up to 15 min / side + 110€</label>
+                                <input id="23minB" type="radio" name="lacquer-radB" value="130">
+                                <label for="23minB">up to 23 min / side + 130€</label>
+                                <select onchange="calculateTotal()" style="display: block" class="input-field" id="pressing-shipment" required>
+                                    <option name="pressing-shipment" value="0" selected="selected">Shipping to pressing plant: * </option>
+                                    <option name="pressing-shipment" value="8">Germany + 8€</option>
+                                    <option name="pressing-shipment" value="18">Europe + 18€</option>
+                                    <option name="pressing-shipment" value="40">Worldwide + 40€</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="checkbox" >
+                            <input style="display: inline-block" type="checkbox" id="digital" name="digital"
+                                >
+                            <label style="display: inline-block" for="digital">Digital</label>
+                        </div>
+                        <div onchange="calculateTotal()" id="cd-checkbox" class="checkbox" >
+                            <input style="display: inline-block" type="checkbox" id="cd" name="cd"
                             >
-                        <label style="display: inline-block" for="digital">Digital</label>
-                    </div>
-                    <div onchange="calculateTotal()" id="cd-checkbox" class="checkbox" >
-                        <input style="display: inline-block" type="checkbox" id="cd" name="cd"
-                        >
-                        <label style="display: inline-block" for="cd">CD</label>
-                    </div>
-                    <div onchange="calculateTotal()" id="cd-radio" class="radio hidden">
-                        <p class="small-text">Format to be delivered to duplication plant, contact us if you have questions</p>
-                        <input id="ddp" type="radio" name="cd-radio" value="40">
-                        <label for="ddp">DDP image / + 40€</label>
-                        <input id="cdmaster" type="radio" name="cd-radio" value="40">
-                        <label for="cdmaster">Physical CD Master / + 40€</label>
-                    </div>
-                    <div onchange="calculateTotal()" id="tape-checkbox" class="checkbox" >
-                        <input style="display: inline-block" type="checkbox" id="tape" name="tape"
-                        >
-                        <label style="display: inline-block" for="tape">Cassette</label>
-                    </div>
-                    <div onchange="calculateTotal()" id="tape-radio" class="radio hidden">
-                        <input id="mastercassette" type="radio" name="tape-radio" value="20">
-                        <label for="mastercassette">Master Cassette / + 20€</label>
-                        <input id="digitalmastercassette" type="radio" name="tape-radio" value="0">
-                        <label for="digitalmastercassette">Digital Master</label>
-                    </div>
-                    <textarea 
-                        class="input-field last"
-                        id="comments" 
-                        name="comments" 
-                        placeholder="Suggestions about the sound, references, pauses between the songs..." 
-                        rows="2" 
-                    ></textarea>
-                </fieldset>
-                <hr class="hr-black" >
-                <fieldset class="unique-col" >  
-                    <p>VAT</p>
+                            <label style="display: inline-block" for="cd">CD</label>
+                        </div>
+                        <div onchange="calculateTotal()" id="cd-radio" class="radio hidden">
+                            <p class="small-text">Format to be delivered to duplication plant, contact us if you have questions</p>
+                            <input id="ddp" type="radio" name="cd-radio" value="40">
+                            <label for="ddp">DDP image / + 40€</label>
+                            <input id="cdmaster" type="radio" name="cd-radio" value="40">
+                            <label for="cdmaster">Physical CD Master / + 40€</label>
+                        </div>
+                        <div onchange="calculateTotal()" id="tape-checkbox" class="checkbox" >
+                            <input style="display: inline-block" type="checkbox" id="tape" name="tape"
+                            >
+                            <label style="display: inline-block" for="tape">Cassette</label>
+                        </div>
+                        <div onchange="calculateTotal()" id="tape-radio" class="radio hidden">
+                            <input id="mastercassette" type="radio" name="tape-radio" value="20">
+                            <label for="mastercassette">Master Cassette / + 20€</label>
+                            <input id="digitalmastercassette" type="radio" name="tape-radio" value="0">
+                            <label for="digitalmastercassette">Digital Master</label>
+                        </div>
+                        <textarea 
+                            class="input-field last"
+                            id="comments" 
+                            name="comments" 
+                            placeholder="Suggestions about the sound, references, pauses between the songs..." 
+                            rows="2" 
+                        ></textarea>
+                        <p>VAT</p>
                     <div onchange="calculateTotal()" id="vat-radio" class="radio">
                         <input id="novat" type="radio" name="vat-radio" value="1.16">
                         <label for="novat">My billing address is in Germany or no VAT number + 16%</label>
@@ -279,7 +276,7 @@
                         <p id="total">Total: </p>
                     </div>
                 </fieldset>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 </section>

@@ -552,51 +552,29 @@ header {
 
 /* form */
 
+
+
 .input-field {
     border: black solid 1px;
+    border: black solid 1px;
     margin: 10px 0;
-    padding: 10px 20px;
-    min-width: 630px;
-}
-
-.form-container {
-    margin: 0 25px;
-}
-
-.form-box {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
 }
 
 .form-col {
-    max-width: 50rem;
     display: flex;
     flex-direction: column;
+    min-width: 650px;
 }
 
 .unique-col {
-    align-self: flex-start;
+    width: 100%;
     margin: 30px 0;
-}
-
-.left {
-    margin-right: 1rem;
-}
-
-.right {
-    margin-left: 1rem;
-}
-
-select {
-    height: 45px;
-    color: #a0afc0;
 }
 
 .radio {
     padding: 0 20px;
 }
+
 
 .hidden {
     display: none;
@@ -606,15 +584,25 @@ select {
     display: inline-block;
 }
 
-.small-text {
-    font-size: 0.6rem;
-}
-
-.last {
-    height: 76px;
+select {
+    height: 45px;
+    color: #a0afc0;
 }
 
 .down {
     position: relative;
     top: 56px;
+}
+
+
+.small-text {
+    font-size: 0.6rem;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .down {
+        position: relative;
+        top: 0rem;
+    }
 }
