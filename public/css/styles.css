@@ -8,7 +8,15 @@
     box-sizing: border-box;
 }
 
-body {
+section {
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    font-family: "Montserrat", sans-serif;
+}
+
+footer {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -27,6 +35,7 @@ header {
     left: 0;
     z-index: 90;
 }
+
 
 /* generic buttons */
 
@@ -271,19 +280,26 @@ header {
 /* hero section home */
 .big-title {
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 4rem;
 }
 
 .mid-title {
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 3rem;
 }
 
 .small-title {
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    color: #D4CCC4;
+    font-size: 2.2rem;
+    font-weight: 500;
 }
 
 .hero-img-cont {
@@ -305,6 +321,7 @@ header {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
+
 
 /* media queries hero section */
 @media screen and (max-width: 1100px) {
@@ -331,6 +348,11 @@ header {
     transform: skewX(10deg);
     margin-left: -100px;
     border-right: solid 10px #880b8a;
+}
+
+.left-skewed-container:hover {
+    border-right: solid 10px #ccff00;
+    transition: border-right 1s;
 }
 
 .skewed-img-container {
