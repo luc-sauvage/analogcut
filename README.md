@@ -20,4 +20,4 @@ DEMO 4
 
 DEMO 5
 <br>
-<img src="https://i.makeagif.com/media/12-09-2020/tSdr7L.gif" alt="analogcut_demo5">
+<img src="https://i.makeagif.com/media/12-09-2020/pcv-jF.gif" alt="analogcut_demo5">
