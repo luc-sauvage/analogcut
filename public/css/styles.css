@@ -18,6 +18,7 @@ nav {
 
 footer {
     font-family: "Montserrat", sans-serif;
+    text-align: -webkit-center;
 }
 
 a {
@@ -36,7 +37,6 @@ header {
     z-index: 90;
 }
 
-
 /* generic buttons */
 
 .text-link {
@@ -47,15 +47,32 @@ header {
     color: #ccff00;
 }
 
-.button-type1 {
+.button {
     background-color: #880b8a;
     color: white;
+}
+
+.button:hover {
+    background-color: #ccff00;
+    color: black;
+}
+
+.type1 {
     margin: 30px auto;
 }
 
-.button-type1:hover {
-    background-color: #ccff00;
-    color: black;
+.type2 {
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 800px) {
+    .type1 {
+        margin-top: 40px;
+        width: 100%;
+    }
+    .type2 {
+        width: auto;
+    }
 }
 
 /* navbar */
@@ -297,7 +314,7 @@ header {
 }
 
 .subtitle {
-    color: #D4CCC4;
+    color: #d4ccc4;
     font-size: 2.2rem;
     font-weight: 500;
 }
@@ -322,7 +339,6 @@ header {
     filter: grayscale(0%);
 }
 
-
 /* media queries hero section */
 @media screen and (max-width: 1100px) {
     .big-title {
@@ -332,6 +348,12 @@ header {
 }
 
 /* hero section product  */
+
+.big-title-product {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
 
 .hero-prod-container {
     width: 100vw;
@@ -378,7 +400,25 @@ header {
         position: relative;
         left: 100px;
     }
+
+    .hero-prod-text {
+        max-width: 60%;
+    }
 }
+
+@media screen and (max-width: 1300px) {
+    .big-title-product {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero-prod-text {
+        left: 15%;
+    }
+}
+
 /* mid section home */
 
 .home-description {
@@ -476,10 +516,6 @@ header {
         min-width: 75%;
         margin-bottom: 20px;
     }
-    .button-type1 {
-        margin-top: 40px;
-        width: 100%;
-    }
 }
 
 /* mid section product */
@@ -574,10 +610,11 @@ header {
     padding: 100px 0 120px;
     margin: -100px 0;
     background-color: #880b8a;
-    
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     color: black;
 }
 
@@ -627,7 +664,6 @@ select {
     top: 56px;
 }
 
-
 .small-text {
     font-size: 0.6rem;
 }
@@ -636,7 +672,7 @@ select {
     color: white;
     background-color: #000;
     padding: 10px 20px;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .total-button {
@@ -657,6 +693,10 @@ select {
 }
 
 .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
     position: relative;
     top: 6px;
@@ -670,19 +710,19 @@ select {
     margin-right: 0.3rem;
     margin-bottom: 0.1rem;
     outline: none;
-    z-index: 1000;
-  }
-  .option-input:hover {
+    /* z-index: 1000; */
+}
+.option-input:hover {
     background: #880b8a;
-  }
-  .option-input:checked {
+}
+.option-input:checked {
     background: #ccff00;
-  }
-  .option-input:checked::before {
+}
+.option-input:checked::before {
     height: 20px;
     width: 20px;
     position: absolute;
-    content: 'X';
+    content: "X";
     display: inline-block;
     font-size: 16.66667px;
     text-align: center;
@@ -690,22 +730,19 @@ select {
     color: black;
     top: -1px;
     left: -1px;
-  }
-  .option-input:checked::after {
+}
+.option-input:checked::after {
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
     background: #ccff00;
-    content: '';
+    content: "";
     display: block;
     position: relative;
     z-index: 100;
-  }
-
-
+}
 
 @media screen and (max-width: 1300px) {
-
     .down {
         position: relative;
         top: 0rem;
@@ -721,23 +758,25 @@ select {
     }
 }
 
-
-
 /* form animations */
 
 @keyframes click-wave {
     0% {
-      height: 20px;
-      width: 20px;
-      opacity: 0.35;
-      position: relative;
+        height: 20px;
+        width: 20px;
+        opacity: 0.35;
+        position: relative;
     }
     100% {
-      height: 100px;
-      width: 100px;
-      margin-left: -40px;
-      margin-top: -40px;
-      opacity: 0;
+        height: 100px;
+        width: 100px;
+        margin-left: -40px;
+        margin-top: -40px;
+        opacity: 0;
     }
-  }
+}
 
+/* footer */
+
+.footer-text {
+}

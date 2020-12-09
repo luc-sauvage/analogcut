@@ -2,23 +2,25 @@ console.log("sanity check");
 
 /* navbar logic */
 
+
+
 document.querySelector(".menu-icons").addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("active");
 });
+
+let logo = document.getElementsByClassName("navbar-logo")[0];
+let navbar = document.getElementsByClassName("navbar")[0];
 
 window.onscroll = function () {
     growShrinkLogo();
 };
 
 function growShrinkLogo() {
-    let logo = document.getElementsByClassName("navbar-logo")[0];
-    let navbar = document.getElementsByClassName("navbar")[0];
-    console.log(screen.width);
+    
     if (
         (screen.width > 1100 && document.body.scrollTop > 50) ||
         document.documentElement.scrollTop > 50
     ) {
-        console.log("shrinking!");
         navbar.style.height = "6rem";
         navbar.style.backgroundColor = "black";
         logo.style.width = "12rem";
@@ -36,7 +38,6 @@ function growShrinkLogo() {
         } else {
             logo.style.top = "0px";
         }
-        console.log("NOT shrinking!");
     }
 }
 
