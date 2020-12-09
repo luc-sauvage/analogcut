@@ -16,7 +16,7 @@ DEMO 3
 
 DEMO 4
 <br>
-<img src="https://i.makeagif.com/media/12-09-2020/rK_W0B.gif" alt="analogcut_demo4">
+<img src="https://i.makeagif.com/media/12-09-2020/U8sRh_.gif" alt="analogcut_demo4">
 
 DEMO 5
 <br>
