@@ -9,7 +9,7 @@ DEMO 2
 <img src="https://i.makeagif.com/media/12-09-2020/MIqJ9v.gif" alt="analogcut_demo2">
 
 DEMO 3 
-<img src="https://i.makeagif.com/media/12-09-2020/z8YvgT.gif" alt="analogcut_demo3">
+![analogcut_demo4](https://i.makeagif.com/media/12-09-2020/z8YvgT.gif)
 
 DEMO 4
-<img src="https://i.makeagif.com/media/12-09-2020/qjJchC.gif" alt="analogcut_demo4">
+![analogcut_demo4](https://i.makeagif.com/media/12-09-2020/qjJchC.gif)
