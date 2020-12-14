@@ -26,6 +26,7 @@
     "eslint-plugin-react-hooks": "^4.0.0"
   },
   "scripts": {
+    "start": "node index.js",
     "build": "postcss public/css/tailwind.css -o public/build/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
