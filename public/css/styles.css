@@ -593,6 +593,7 @@ header {
     color: white;
     background-color: black;
     height: 10vh;
+    min-height: 100px; 
 }
 
 
