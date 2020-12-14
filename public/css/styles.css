@@ -37,6 +37,13 @@ header {
     z-index: 90;
 }
 
+/* classes added to solve heroku bugs */
+
+.white-on-black {
+    color: white;
+    background-color: black;
+}
+
 /* generic buttons */
 
 .text-link {
