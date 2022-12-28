@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines" : { 
+    "npm" : ">=6.0.0 <7.0.0",
+    "node" : ">=14.0.0 <15.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "autoprefixer": "^10.0.1",
